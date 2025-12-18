@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>formulario de contacto</h2>
+<form action="procesarFormulario" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+    
+    <input type="submit" value="Enviar">
+    
+ </form>
+ <br>
+ <h2>Comparación entre los métodos GET y POST</h2>
+ <table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Aspecto</th>
+      <th>GET</th>
+      <th>POST</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Visibilidad</td>
+      <td>Visible en la barra de direcciones para el usuario</td>
+      <td>Invisible para el usuario</td>
+    </tr>
+    <tr>
+      <td>Marcadores e historiales de navegación</td>
+      <td>Los parámetros URL se guardan junto al URL</td>
+      <td>Los parámetros URL no se guardan junto al URL</td>
+    </tr>
+    <tr>
+      <td>Caché y registro del servidor</td>
+      <td>Los parámetros URL se guardan sin cifrar.</td>
+      <td>Los parámetros URL no se guardan automáticamente</td>
+    </tr>
+    <tr>
+      <td>Comportamiento al actualizar el navegador o retroceder</td>
+      <td>Los parámetros URL no se envían de nuevo</td>
+      <td>El navegador advierte de que los datos del formulario se enviarán de nuevo</td>
+    </tr>
+    <tr>
+      <td>Tipo de datos</td>
+      <td>Solo caracteres ASCII</td>
+      <td>Caracteres ASCII y datos binarios</td>
+    </tr>
+    <tr>
+      <td>Longitud de datos</td>
+      <td>Limitado al máximo del URL (2048 caracteres)</td>
+      <td>Ilimitado</td>
+    </tr>
+  </tbody>
+</table>
+ 
+</body>
+</html>

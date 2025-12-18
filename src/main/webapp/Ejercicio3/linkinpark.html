@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Linkin Park</title>
+  <style>
+    :root{
+      --bg: #f7f7f7;
+      --ink: #222;
+      --muted: #5a5a5a;
+      --panel: rgba(255,255,255,.88);
+      --panel2: rgba(255,255,255,.94);
+      --stroke: rgba(0,0,0,.12);
+      --accent: #3a3a3a;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      /* Requisito: imagen de fondo desde carpeta img */
+      background-image:
+        linear-gradient(to bottom, rgba(255,255,255,.90), rgba(255,255,255,.96)),
+        url("img/fondo-linkinpark.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .wrap{
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 22px 14px 40px;
+    }
+
+    /* Tarjeta principal (más original pero misma estructura) */
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--stroke);
+      box-shadow: 0 14px 40px rgba(0,0,0,.10);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .top{
+      padding: 18px 18px 10px;
+      border-bottom: 1px solid rgba(0,0,0,.07);
+      background:
+        radial-gradient(700px 140px at 10% 0%, rgba(0,0,0,.06), transparent 60%),
+        radial-gradient(700px 140px at 90% 0%, rgba(0,0,0,.05), transparent 60%),
+        rgba(255,255,255,.65);
+    }
+
+    h1{
+      margin: 0 0 8px;
+      font-size: 34px;
+      letter-spacing: .2px;
+    }
+
+    .desc{
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .hero{
+      padding: 0 18px 18px;
+    }
+
+    .hero img{
+      width: 100%;
+      display: block;
+      border: 1px solid rgba(0,0,0,.18);
+      border-radius: 6px;
+      background: #ddd;
+    }
+
+    /* Secciones */
+    .section{
+      padding: 16px 18px 2px;
+    }
+
+    h2{
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 22px;
+      border-bottom: 2px solid rgba(0,0,0,.12);
+      padding-bottom: 6px;
+    }
+
+    ul{
+      margin: 0 0 18px;
+      padding-left: 22px;
+    }
+
+    /* Tabla (muy similar a la captura) */
+    .table-wrap{
+      display: inline-block; /* para que no ocupe todo el ancho, como en la imagen */
+      background: var(--panel2);
+      border: 1px solid rgba(0,0,0,.22);
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
+
+    .caption{
+      font-weight: 700;
+      text-align: center;
+      padding: 10px 12px 6px;
+      font-size: 18px;
+    }
+
+    table{
+      border-collapse: collapse;
+      min-width: 360px;
+    }
+
+    th, td{
+      border: 1px solid rgba(0,0,0,.35);
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+
+    th{
+      background: #555;
+      color: #fff;
+      text-align: left;
+    }
+
+    .note{
+      padding: 10px 12px;
+      border-top: 1px solid rgba(0,0,0,.22);
+      background: rgba(0,0,0,.03);
+      font-style: italic;
+      color: #333;
+      font-size: 13px;
+    }
+
+    /* Link final */
+    a{
+      color: #1a50ff;
+      text-decoration: underline;
+    }
+
+    .bottom{
+      padding: 10px 18px 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <article class="card">
+      <header class="top">
+        <h1>Linkin Park</h1>
+        <p class="desc">Banda estadounidense de rock alternativo formada en 1996 (Agoura Hills, California).</p>
+      </header>
+
+      <section class="hero">
+        <!-- Imagen principal (si no la quieres, puedes quitar este bloque) -->
+        <img src="img/linkinpark.jpg" alt="Foto de Linkin Park" />
+      </section>
+
+      <section class="section">
+        <h2>Integrantes del grupo</h2>
+        <ul>
+          <li>Chester Bennington</li>
+          <li>Mike Shinoda</li>
+          <li>Brad Delson</li>
+          <li>Dave “Phoenix” Farrell</li>
+          <li>Rob Bourdon</li>
+          <li>Joe Hahn</li>
+        </ul>
+
+        <h2>Discografía</h2>
+        <div class="table-wrap" role="group" aria-label="Grandes éxitos de Linkin Park">
+          <div class="caption">Grandes éxitos de Linkin Park</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Año</th>
+                <th>Disco</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2000</td>
+                <td>Hybrid Theory</td>
+              </tr>
+              <tr>
+                <td>2003</td>
+                <td>Meteora</td>
+              </tr>
+              <tr>
+                <td>2007</td>
+                <td>Minutes to Midnight</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="note">“Hybrid Theory” fue el álbum más exitoso.</div>
+        </div>
+      </section>
+
+      <section class="bottom">
+        <h2>Sitio web oficial</h2>
+        <p><a href="https://www.linkinpark.com/" target="_blank" rel="noopener noreferrer">Linkin Park Official</a></p>
+      </section>
+    </article>
+  </div>
+</body>
+</html>
