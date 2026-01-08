@@ -12,6 +12,24 @@
     <li><a href="../calculadora?op=resta&a=10&b=5">Resta (10 - 5)</a></li>
     <li><a href="../calculadora?op=multiplicacion&a=10&b=5">Multiplicación (10 * 5)</a></li>
   </ul>
+  
+  <form action="http://localhost:8084/proyectoweb/calculadora" method="post">
+    <br>
+    <label for="num1">Número 1:</label>
+    <input type="text" id="num1" name="num1">
+    <br>
+    <label for="num2">Número 2:</label>
+    <input type="text" id="num2" name="num2">
+    <br>
+    <label for="op">Operación:</label>
+    <select id="op" name="operacion">
+        <option value="suma">Suma</option>
+        <option value="resta">Resta</option>
+        <option value="multiplicacion">Multiplicación</option>
+    </select>
+    <br>
+    <input type="submit" value="Calcular">
+</form>
 
 </body>
 </html>
